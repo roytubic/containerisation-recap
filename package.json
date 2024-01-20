@@ -1,0 +1,16 @@
+{
+  "name": "containerisation-recap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./node_modules/mocha/bin/mocha --timeout=30000 ./app/puppeteer/test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^5.0.0",
+    "mocha": "^10.2.0",
+    "puppeteer": "^21.7.0"
+  }
+}
