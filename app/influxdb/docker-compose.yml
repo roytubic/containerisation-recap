@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  influxdb:
+    build: 
+      context: . # Context for the Dockerfile
+      args:
+        - INFLUXDB_VERSION=${INFLUXDB_VERSION}
+        - INFLUX_API=${INFLUX_API}
+        - ORG_NAME=${ORG_NAME}
+        - BUCKET_NAME=${BUCKET_NAME}
+        - USERNAME=${USERNAME}
+        - WRITE_USER=${WRITE_USER}
+        - WRITE_USER_PASSWORD=${WRITE_USER_PASSWORD}
+    ports:
+      - "8086:8086" # Expose port 8086
+    environment: # Environment variables from .env file
+      - INFLUXDB_VERSION
+      - INFLUX_API
+      - ORG_NAME
+      - BUCKET_NAME
+      - USERNAME
+      - WRITE_USER
+      - WRITE_USER_PASSWORD
+    volumes:
+      - ./setupInfluxdb.sh:/setupInfluxdb.sh # Mount the setup script
+    command: /setupInfluxdb.sh # Run the setup script
