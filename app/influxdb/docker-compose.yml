@@ -9,6 +9,7 @@ services:
         - ORG_NAME=${ORG_NAME}
         - BUCKET_NAME=${BUCKET_NAME}
         - USERNAME=${USERNAME}
+        - ADMIN_PASSWORD=${ADMIN_PASSWORD}
         - WRITE_USER=${WRITE_USER}
         - WRITE_USER_PASSWORD=${WRITE_USER_PASSWORD}
     ports:
@@ -19,6 +20,7 @@ services:
       - ORG_NAME
       - BUCKET_NAME
       - USERNAME
+      - ADMIN_PASSWORD
       - WRITE_USER
       - WRITE_USER_PASSWORD
     volumes:

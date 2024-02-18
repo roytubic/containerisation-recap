@@ -3,12 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "node ./node_modules/mocha/bin/mocha --timeout=30000 ./app/puppeteer/test"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@influxdata/influxdb-client": "^1.33.2",
+    "@influxdata/influxdb-client-apis": "^1.33.2",
+    "dotenv": "^16.4.4",
     "mocha": "^10.2.0",
     "puppeteer": "^21.7.0"
   },
